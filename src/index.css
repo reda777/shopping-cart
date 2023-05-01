@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.prod{
+  width: 100px;
+  height: 300px;
+}
+.prod img{
+  width: 50px;
+  height: 50px;
+}
