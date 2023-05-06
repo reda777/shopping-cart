@@ -13,7 +13,7 @@ function Shop(props){
         props.setCart([...props.cart,product]);
     }
     return(
-        <div className="products">
+        <div className="shop">
             {prods.map((prod)=>{
                 let currentProd=props.cart.find(element => element.id === prod.id);
                 return (
