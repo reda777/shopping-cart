@@ -58,11 +58,17 @@ function Cart(props){
                 );
             })}
             </div>
-            <div className="checkoutBtn">
+            {(props.cart.length===0)?<div className="checkoutBtn">
+                <div className="noItems">
+                    Checkout
+                </div>
+            </div>
+            :<div className="checkoutBtn">
                 <Link to="/checkout">
                     Checkout
                 </Link>
-            </div>
+            </div>}
+            
         </div>
     );
 }

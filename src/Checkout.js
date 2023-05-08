@@ -30,6 +30,11 @@ function Checkout(props){
         let newCart=props.cart.filter(prod=>prod.id!==parseInt(e.currentTarget.dataset.id));
         props.setCart(newCart);
     }
+    
+    function totalPrice(){
+        let totalPrice=props.cart.reduce((acc,prod)=>{return acc + (prod.price * prod.quantity)},0)
+        return totalPrice;
+    }
     return (
         <div className="checkout">
             <div className="products">
@@ -53,9 +58,12 @@ function Checkout(props){
                         <div className="removeCart" data-id={prod.id} onClick={handleRemove}>
                             {crossSvg}
                         </div>
-                    </div>
+                    </div> 
                 );
             })}
+                <div className="totalPrice">
+                    Total Price: {totalPrice()}   
+                </div>
             </div>
         </div>
     );
