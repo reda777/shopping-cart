@@ -24,7 +24,7 @@ function Shop(props){
                         <div className="quantity">
                             <input type="number" id="quantity" defaultValue="1" min="1" max={prod.stock}/>
                         </div>
-                        <div className="price">{prod.price}</div>
+                        <div className="price">Price: {prod.price}</div>
                         {(currentProd)?<div className="addedCart">Added To Cart</div>:<div className="addCart" data-id={prod.id} onClick={handleAddCart}>Add To Cart</div>}
                     </div>
                 );
