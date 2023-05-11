@@ -36,32 +36,32 @@ function Checkout(props){
         return totalPrice;
     }
     return (
-        <div className="checkout">
-            <div className="products">
+        <div data-testid="checkout" className="checkout">
+            <div  className="products">
             {props.cart.map((prod)=>{
                 return (
-                    <div className="prod" key={prod.id}>
+                    <div data-testid="prod" className="prod" key={prod.id}>
                         <div className="img"><img src={prod.img} alt={prod.name}/></div>
                         <div className="name"><p>{prod.name}</p></div>
                         <div className="quantity">
-                            <div className="minusBtn" data-id={prod.id} onClick={handleMinus}>
+                            <div data-testid="minusBtn" className="minusBtn" data-id={prod.id} onClick={handleMinus}>
                                 {minusSvg}
                             </div>
                             <div className="amount">
                                 {prod.quantity}
                             </div>
-                            <div className="plusBtn" data-id={prod.id} onClick={handlePlus}>
+                            <div data-testid="plusBtn" className="plusBtn" data-id={prod.id} onClick={handlePlus}>
                                 {plusSvg}
                             </div>
                         </div>
                         <div className="price">Price: <p> &nbsp;{prod.price * prod.quantity}</p></div>
-                        <div className="removeCart" data-id={prod.id} onClick={handleRemove}>
+                        <div data-testid="removeCart" className="removeCart" data-id={prod.id} onClick={handleRemove}>
                             {crossSvg}
                         </div>
                     </div> 
                 );
             })}
-                <div className="totalPrice">
+                <div data-testid="totalPrice" className="totalPrice">
                     Total Price: {totalPrice()}   
                 </div>
             </div>
