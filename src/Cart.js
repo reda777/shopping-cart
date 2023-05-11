@@ -32,7 +32,7 @@ function Cart(props){
         props.setCart(newCart);
     }
     return (
-        <div className="cart">
+        <div className="cart" data-testid="cart">
             <div className="products">
             {props.cart.map((prod)=>{
                 return (
